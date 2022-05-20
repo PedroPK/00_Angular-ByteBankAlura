@@ -54,6 +54,14 @@ How to store at Component's and show a list of objects on the Template:
  - If any of previous arrays have any renaming, do the same at App Template
  - On Extrato Template, add a <div> with the *ngFor directive and do a "let item of collection" command on it to iterate, using the item in the <p> as content
 
+Formating Date and Currency do Locale
+ - in App Module, at @NgModule has the array field "providers". We should add 2 object in it, to Locale and Currency
+  -=- For Locale, we need to add "{provide: LOCALE_ID, userValue: 'pt'}
+  -=- For Currency, we need to add "provide: DEFAULT_CURRENCY_CODE, userValue: 'BRL'"
+  -=- both provide's above are imported from '@angular/core'
+  -=- The "localePt"  has to be imported from '@angular/common/locales/pt'
+  -=- The "localePt" and 'pt' have to be passed as parameters to 'registerLocaleData()', a function imported from '@angular/common'
+
 
 References:
  - https://github.com/alura-cursos/1952-angular/tree/aula-1
