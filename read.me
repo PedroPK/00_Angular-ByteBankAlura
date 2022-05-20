@@ -22,5 +22,24 @@ How ro override the Submit event in the forma
  - In .TS File, add a new Method (transferir()) that will be invoked at Submit Event from Form
  - At <form> tag, add the "(ngSubmit)=" Attribute/"Event Binding" invoking the Method created before
 
- [ngModel]    = Property Binding - Data is transfered from Component to Template only,
+Types of Binding
  ([ngModel])  = Two Way Data Binding - Data is transfered from Template to Component and vice versa
+  - https://angular.io/guide/property-binding
+
+ [ngModel]    = Property Binding - Data is transfered from Component to Template only,
+  - https://angular.io/guide/property-binding
+
+ (ngModel)    = Event Binding - Binds and Event from DOM/Template to a Method at a Angular/TypeScript Component
+  - https://angular.io/guide/event-binding
+
+How to Output data from Component to Template
+ - In .TS class, add a new Attribute annotated with @Output and receiving a new Object of EventEmitter (typed with "any" for now)
+ - Invoke the new Attribute with .emit receiving as parameter the Object(s) that we want to export as an Output
+ - In the Class AppComponent in "app.component.ts" add a Method that is going to receive the Output Data
+ - In the "app.component.html" add an Event Binding with the @Output attribute created in .TS class, receiving in an attribuition the Method created in AppComponent
+
+
+References:
+ - https://github.com/alura-cursos/1952-angular/tree/aula-1
+ - https://github.com/alura-cursos/1952-angular/tree/aula-2
+
