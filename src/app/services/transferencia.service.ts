@@ -22,7 +22,7 @@ export class TransferenciaService {
   }
 
   adicionarData(transferencia: any) {
-    transferencia.data = new Date();
+    transferencia.date = new Date();
   }
 
 }
