@@ -44,7 +44,9 @@ Creating a new Component automatically
 
  Connecting the new Extrato component with App component
   - App Component has the TransferenciaAppComponent object
-  - Extrato Component has to have an @Input() transferenciaExtrato attribute to receive the previous object.
+  - App Template has on it both an Object (Transferencia's Array) and the Extrato Template.
+   -=- it allows a binding, where the Extrato Component can have access to this Transferencia's Array
+  - Extrato Component has to have an @Input() transferenciasExtrato Array attribute to receive the previous object.
   - Extrato Template gets the transferenciaExtrato object to get it's attributes
   - App Template receives the <app-extrato> tag, and we put a Property Binding to transferenciaAppComponent on it
 
@@ -62,10 +64,15 @@ Formating Date and Currency do Locale
   -=- The "localePt"  has to be imported from '@angular/common/locales/pt'
   -=- The "localePt" and 'pt' have to be passed as parameters to 'registerLocaleData()', a function imported from '@angular/common'
 
+Replacing the content of a <TBody> with a conditional If
+ - using the *ngIf directive, we can use a conditional clause on it, to show it's original content, or replace it by something else
+ - the <ng-Template> should be named with "#", and have a content that will be placed as <TBody> content
 
 References:
  - https://github.com/alura-cursos/1952-angular/tree/aula-1
  - https://github.com/alura-cursos/1952-angular/tree/aula-2
  - https://github.com/alura-cursos/1952-angular/tree/aula-3
+ - https://github.com/alura-cursos/1952-angular/tree/aula-4
+
 
 
