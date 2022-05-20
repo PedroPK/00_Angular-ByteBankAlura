@@ -48,6 +48,11 @@ Creating a new Component automatically
   - Extrato Template gets the transferenciaExtrato object to get it's attributes
   - App Template receives the <app-extrato> tag, and we put a Property Binding to transferenciaAppComponent on it
 
+How to store at Component's and show a list of objects on the Template:
+ - On App Component, change the TransferenciaAppComponent to an Array and initialize it empty
+ - On Extrato Component, also change the TransferenciaExtrato to an empty Array
+ - If any of previous arrays have any renaming, do the same at App Template
+ - On Extrato Template, add a <div> with the *ngFor directive and do a "let item of collection" command on it to iterate, using the item in the <p> as content
 
 
 References:

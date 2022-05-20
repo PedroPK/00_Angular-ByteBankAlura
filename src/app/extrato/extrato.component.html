@@ -1,2 +1,4 @@
-<p>Valor:   {{transferenciaExtrato?.valor}}</p>
-<p>Destino: {{transferenciaExtrato?.destino}}</p>
+<div *ngFor="let transferencia of transferenciasExtrato">
+  <p>Valor:   {{transferencia?.valor}}</p>
+  <p>Destino: {{transferencia?.destino}}</p>
+</div>
