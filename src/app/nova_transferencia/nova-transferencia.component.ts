@@ -13,13 +13,24 @@ export class NovaTransferenciaComponent {
   @Output() aoTransferir = new EventEmitter<any>();
 
   transferir() {
-    console.log('Uma nova trasnferência foi solicitada.');
+    console.log('Uma nova transferência foi solicitada.');
 
+    // Object with both values
     const tranferencia = {
       valor:    this.valor,
       destino:  this.destino
     }
 
+    // Sending object to App Component Template
     this.aoTransferir.emit(tranferencia);
+
+    // Cleaning the attributes
+    this.limparCampos();
   }
+
+  limparCampos() {
+    this.valor    = null;
+    this.destino  = null;
+  }
+
 }
