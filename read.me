@@ -66,7 +66,12 @@ Formating Date and Currency do Locale
 
 Replacing the content of a <TBody> with a conditional If
  - using the *ngIf directive, we can use a conditional clause on it, to show it's original content, or replace it by something else
- - the <ng-Template> should be named with "#", and have a content that will be placed as <TBody> content
+ - the <ng-Template> should be named with "#", and have a content that will be placed as <TBody> content if Else clause would be satisfied
+
+Refactoring with Service
+ - App Component does not need any more to have the Transferencia's Array and the logic of Adding new Elements to it.
+ - App Template does not need any more to have a reference to Transferencia's Array
+ - Extrato Component does not need any more to use the @Input(), but we need to inject a private attribute to Service in Constructor and invoke the Service method in ngOnInit() method and store its result in a own array attribute
 
 References:
  - https://github.com/alura-cursos/1952-angular/tree/aula-1
