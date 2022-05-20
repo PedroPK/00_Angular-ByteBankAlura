@@ -7,12 +7,20 @@ Commands executed to generate this project
 
 Steps to implement a New Component
  - Create a new folder
-  -=- Create a .TS File with class
-  -=- Create a HTML File
-  -=- Create a SCSS File
+  -=- Create a .TS File (nova-transferencia.component.ts) with class
+  -=- Create a HTML (nova-transferencia.component.html) File
+  -=- Create a SCSS (nova-transferencia.component.scss) File
   -=- Add the Class created at .TS file into the "app.module.ts", specifically into "declarations" array
 
 Steps to use the new Component
  - Add the new <TAG> created, as especified in "selector" at .TS file, in the "app.component.html" file
  - To verify its funcionality, access the "http://localhost:4200" URL and inspect the page content.
   -=- Inside the <app-root> tag, it should appear the new tag created.
+
+How ro override the Submit event in the forma
+ - In the "app.module.ts", import the FormsModule (@angular/forms) at "imports".
+ - In .TS File, add a new Method (transferir()) that will be invoked at Submit Event from Form
+ - At <form> tag, add the "(ngSubmit)=" Attribute/"Event Binding" invoking the Method created before
+
+ [ngModel]    = Property Binding - Data is transfered from Component to Template only,
+ ([ngModel])  = Two Way Data Binding - Data is transfered from Template to Component and vice versa
