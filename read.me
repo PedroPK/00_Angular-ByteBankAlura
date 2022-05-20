@@ -42,6 +42,14 @@ Creating a new Component automatically
  - With the following command, the Angular will create a new Folder with 4 files (.TS, .HTML, .SCSS and a .SPEC.TS for Testing):
  > ng generate component <NAME OF THE NEW COMPONENT>
 
+ Connecting the new Extrato component with App component
+  - App Component has the TransferenciaAppComponent object
+  - Extrato Component has to have an @Input() transferenciaExtrato attribute to receive the previous object.
+  - Extrato Template gets the transferenciaExtrato object to get it's attributes
+  - App Template receives the <app-extrato> tag, and we put a Property Binding to transferenciaAppComponent on it
+
+
+
 References:
  - https://github.com/alura-cursos/1952-angular/tree/aula-1
  - https://github.com/alura-cursos/1952-angular/tree/aula-2
