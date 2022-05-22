@@ -1,3 +1,4 @@
+import { Transferencia } from 'src/models/transferencia.model';
 import { TransferenciaService } from './../services/transferencia.service';
 import { Component, Input, OnInit } from '@angular/core';
 
@@ -13,7 +14,13 @@ export class ExtratoComponent implements OnInit {
   constructor(private transferenciaService: TransferenciaService) { }
 
   ngOnInit(): void {
-      this.transferenciasExtrato = this.transferenciaService.transferencias;
+      // Once the method 'getAllTransfers()' returns an Observable, we need to subscribe() on it to be notified when this asynchronous response is ready
+      this.transferenciaService.getAllTransfers().subscribe(
+        (transferencias: Transferencia[]) => {
+          console.table(transferencias);
+          this.transferenciasExtrato = transferencias
+        }
+      );
   }
 
 }

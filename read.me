@@ -84,6 +84,14 @@ Creating a Mock Rest API with some Data to Tests
 Converting a Json Object into a TypeScript Model Class
  - Access the Json to/2 TS site (http://json2ts.com/)
 
+Class HttpClient
+ - Provide methods to execute HTTP Methods (Get, Post, Put, Delete, etc.)
+ - We are going to inject it on Service class contructor
+ - In App Module, at 'imports', add an entry to HttpClientModule
+
+Consuming Service on Extrato Component
+ - Once getAllTransfers() is implemented on Service, invoke it on ngOnInit() in Extrato Component
+ - The getAllTransfers() return an Observable of Transferencia[], so we should subscribe() on it to be notified when the asyncronous object is ready to be consumed
 
 
 References:

@@ -6,7 +6,7 @@
   </thead>
   <tbody *ngIf="transferenciasExtrato?.length > 0; else listaVazia">
     <tr class="tabela__linha" *ngFor="let transfer of transferenciasExtrato">
-      <td class="tabela__conteudo">{{transfer.date   |   date: "short"}}</td>
+      <td class="tabela__conteudo">{{transfer.data   |   date: "short"}}</td>
       <td class="tabela__conteudo">{{transfer.valor  |   currency}}</td>
       <td class="tabela__conteudo">{{transfer.destino}}</td>
     </tr>
